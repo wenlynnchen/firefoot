@@ -1,10 +1,10 @@
 (function () {
     "use strict";
-    window.onload = function () { window.setTimeout(fadeout, 500); }
-    function fadeout() {
-        document.querySelector('.preloader').style.opacity = '0';
-        document.querySelector('.preloader').style.display = 'none';
-    }
+    // window.onload = function () { window.setTimeout(fadeout, 500); }
+    // function fadeout() {
+    //     document.querySelector('.preloader').style.opacity = '0';
+    //     document.querySelector('.preloader').style.display = 'none';
+    // }
     window.onscroll = function () {
         var header_navbar = document.getElementById("header_navbar");
         var logo = document.querySelector("img#logo");
