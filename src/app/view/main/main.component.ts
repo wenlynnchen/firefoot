@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/database';
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 
@@ -23,11 +24,28 @@ export class MainComponent implements OnInit {
   number:string = '';
   message:string = '';
 
-  constructor( public db: AngularFireDatabase) { }
+  demoVideo="https://drive.google.com/file/d/1AaPm12QO0jJ6S31ewC9l8xzUc0CN9_21/preview";
 
+  constructor( public db: AngularFireDatabase, private sanitizer:DomSanitizer) { }
+
+  trustUrl(url: string) {
+    if(url){
+      return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+    return ""
+  }
 
   ngOnInit(): void {
 
+  }
+
+  ChangeVid(lv:any){
+    if(lv == '1'){
+      this.demoVideo="https://drive.google.com/file/d/1AaPm12QO0jJ6S31ewC9l8xzUc0CN9_21/preview";
+    }else if(lv == '2'){
+      this.demoVideo="https://drive.google.com/file/d/1CJKbZYCkz_3GKEdT4cIbO89dONe5WFmV/preview"
+    }
+   
   }
 
   send(){

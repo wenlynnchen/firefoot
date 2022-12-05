@@ -14,6 +14,7 @@ import { OrinialComponent } from './view/orinial/orinial.component';
 import { MainEnComponent } from './view/main-en/main-en.component';
 import { LocationStrategy, HashLocationStrategy, PathLocationStrategy} from '@angular/common';
 import { MessageComponent } from './view/message/message.component';
+import { TeacherProfileComponent } from './view/teacher-profile/teacher-profile.component';
 
 
 
@@ -24,6 +25,7 @@ import { MessageComponent } from './view/message/message.component';
     OrinialComponent,
     MainEnComponent,
     MessageComponent,
+    TeacherProfileComponent,
     
   ],
   imports: [

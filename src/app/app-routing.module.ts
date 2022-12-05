@@ -5,12 +5,15 @@ import { MainComponent } from './view/main/main.component';
 import { OrinialComponent } from './view/orinial/orinial.component';
 import { MainEnComponent } from './view/main-en/main-en.component';
 import { MessageComponent } from './view/message/message.component';
+import { TeacherProfileComponent } from './view/teacher-profile/teacher-profile.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'main-en', component: MainEnComponent },
   { path: 'original', component: OrinialComponent },
   { path: 'message', component: MessageComponent },
+  { path: 'teacher/:name', component: TeacherProfileComponent },
+  
   { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
 
