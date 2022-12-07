@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, AngularFireObject } from '@angular/fire/compat/database';
 import { DomSanitizer } from '@angular/platform-browser';
-
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -26,7 +25,7 @@ export class MainComponent implements OnInit {
 
   demoVideo="https://drive.google.com/file/d/1AaPm12QO0jJ6S31ewC9l8xzUc0CN9_21/preview";
 
-  constructor( public db: AngularFireDatabase, private sanitizer:DomSanitizer) { }
+  constructor( public db: AngularFireDatabase, private sanitizer:DomSanitizer,private router:Router) { }
 
   trustUrl(url: string) {
     if(url){
@@ -61,6 +60,10 @@ export class MainComponent implements OnInit {
     }).catch((err)=>{
     console.log(err);
     })
+  }
+
+  goTo(id:any){
+    this.router.navigate(['/teacher'],{ queryParams: { id: id } });
   }
 
 }

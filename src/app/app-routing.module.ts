@@ -12,8 +12,7 @@ const routes: Routes = [
   { path: 'main-en', component: MainEnComponent },
   { path: 'original', component: OrinialComponent },
   { path: 'message', component: MessageComponent },
-  { path: 'teacher/:name', component: TeacherProfileComponent },
-  
+  { path: 'teacher', component: TeacherProfileComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
 ];
 
